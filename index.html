@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2d3802cc6b.js" crossorigin="anonymous"></script>
+    <title>Weather</title>
+</head>
+<body>
+    <div class="weather__main">
+        <div class="weather">
+            <div class="weather__input">
+                <form>
+                    <div id="form__input" class="form-group latlon">
+                        <label>Latidude
+                            <input id="lat" class="form-control" type="text" required>
+                        </label>
+                        <label>Longitude
+                            <input id="lon" class="form-control" type="text" required/>
+                        </label>
+                    </div>
+                    <div id="errorCon" class="error alert alert-warning alert-dismissible fade show latlon" role="alert">
+                        <small id="error"></small>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <button class="btn btn-info" id="auto-search"><i class="fas fa-location-arrow"></i></button>
+                    <button type="submit" id="search" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <div class="weather__text">
+                <h3>City Name : <span id="city">NA</span></h3>
+                <ul>
+                    <li><i class="fas fa-thermometer-quarter"></i><span id="temp">NA</span></li>
+                    <li><i class="fas fa-temperature-low"></i><span id="mintemp">NA</span></li>
+                    <li><i class="fas fa-temperature-high"></i><span id="maxtemp">NA</span></li>
+                    <li><i class="fas fa-wind"></i><span id="press">NA</span></li>
+                    <li><i class="fas fa-tint"></i><span id="humi">NA</span></li>
+                    <li><i class="fas fa-water"></i><span id="sea">NA</span></li>
+                    <li><i class="fas fa-campground"></i><span id="ground">NA</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
